@@ -1,15 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-
- /*
-  * Main - assign a random number to the variable n
-  * each time it is executed.
-  * Complete the source code in order to print
-  * whether the number stored in the variable n is positive or negative.
-  *Description:find a random number and print it
-  *,and if 'main' is positive, zero or negative.
-  *Return : always 0 (success).
+/**
+ * main - Entry point of the program
+ *
+ * This program generates a random number and prints whether the number
+ * is positive or negative. There are no input parameters. The program
+ * returns 0 on success.
+ *
+ * Return: 0 on success
  */
 int main(void)
 {
