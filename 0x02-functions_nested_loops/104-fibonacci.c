@@ -11,6 +11,7 @@ int main(void)
 	unsigned int fib1 = 1, fib2 = 2, next_fib;
 
 	printf("%u, %u", fib1, fib2);
+
 	for (unsigned int i = 2; i < n; i++)
 	{
 	next_fib = fib1 + fib2;
