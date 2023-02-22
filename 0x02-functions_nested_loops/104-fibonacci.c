@@ -20,5 +20,6 @@ int main(void)
 	fib2 = next_fib;
 	}
 	printf("\n");
+
 	return (0);
 }
