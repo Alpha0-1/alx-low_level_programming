@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * largest_prime_factor - finds the largest prime factor of a given number
- * @n: number to find the largest prime factor of
- * Return: largest prime factor of n
+ * main - find the largest prime factor of a given number
+ * 
+ * Return: largest prime factor
  */
-long largest_prime_factor(long n)
+int main(void)
 {
 	long prime = 612852475143, div;
 
