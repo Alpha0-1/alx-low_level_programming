@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * print_number - prints an integer using _putchar
  * @n: the integer to be printed
@@ -9,7 +10,7 @@
  */
 void print_number(int n)
 {
-	unsigned int num;
+	unsigned int num, div = 1;
 
 	if (n < 0)
 	{
@@ -21,8 +22,14 @@ void print_number(int n)
 	num = n;
 	}
 
-	if (num / 10)
-	print_number(num / 10);
+	while (num / div > 9)
+	div *= 10;
 
-	putchar(num % 10 + '0');
+	while (div != 0)
+	{
+	putchar(num / div + '0');
+	num %= div;
+	div /= 10;
+	}
 }
+
