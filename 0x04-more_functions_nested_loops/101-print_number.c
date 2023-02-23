@@ -15,14 +15,17 @@ void print_number(int n)
 	putchar('-');
 	n = -n;
 	}
-	while (n / divisor > 9)
+	while (n / divisor >= 10)
 	{
 	divisor *= 10;
 	}
-	while (divisor != 0)
+	while (divisor > 0)
 	{
-	putchar((n / divisor) + '0');
-	n %= divisor;
+	int digit = n / divisor;
+
+	putchar('0' + digit);
+	n -= digit * divisor;
 	divisor /= 10;
 	}
 }
+
