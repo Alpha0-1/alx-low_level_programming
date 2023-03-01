@@ -8,16 +8,21 @@
  */
 void print_number(int n)
 {
-	unsigned int num = n;
+	int divisor = 1;
 
 	if (n < 0)
 	{
-		putchar('-');
-		num = -num;
+	putchar('-');
+	n = -n;
 	}
 
-	if ((num / 10) > 0)
-		print_number(num / 10);
+	while (n / divisor >= 10)
+	divisor *= 10;
 
-	putchar((num % 10) + '0');
+	while (divisor != 0)
+	{
+	putchar(n / divisor + '0');
+	n %= divisor;
+	divisor /= 10;
+	}
 }
