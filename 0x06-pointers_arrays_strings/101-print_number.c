@@ -9,6 +9,7 @@
 void print_number(int n)
 {
 	int divisor = 1;
+	int num_digits = 1;
 
 	if (n < 0)
 	{
@@ -17,12 +18,16 @@ void print_number(int n)
 	}
 
 	while (n / divisor >= 10)
+	{
 	divisor *= 10;
+	num_digits++;
+	}
 
-	while (divisor != 0)
+	while (num_digits > 0)
 	{
 	putchar(n / divisor + '0');
 	n %= divisor;
 	divisor /= 10;
+	num_digits--;
 	}
 }
