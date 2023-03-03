@@ -9,26 +9,18 @@
  */
 void print_number(int n)
 {
-	int divisor = 1;
-	int num_digits = 1;
+	unsigned int n1;
 
+	n1 = n;
 	if (n < 0)
 	{
 	putchar('-');
-	n = -n;
+	n1 = -n;
 	}
-
-	while (n / divisor >= 10)
+	if (n1 / 10 != 0)
 	{
-	divisor *= 10;
-	num_digits++;
+	print_number(n1 / 10);
 	}
-
-	while (num_digits > 0)
-	{
-	putchar(n / divisor + '0');
-	n %= divisor;
-	divisor /= 10;
-	num_digits--;
-	}
+	putchar((n1 % 10) + '0');
 }
+
