@@ -25,4 +25,3 @@ int is_palindrome(char *s)
 	*(s + len - 3) = '\0';
 	return (is_palindrome(s));
 }
-
