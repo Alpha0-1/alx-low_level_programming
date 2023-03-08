@@ -1,4 +1,5 @@
 #include "main.h"
+#include "string.h"
 /**
  * is_palindrome - Checks if a string is a palindrome
  * @s: Pointer to the first character of the string
@@ -7,26 +8,21 @@
  */
 int is_palindrome(char *s)
 {
-	int len = 0;
-	char *p1, *p2;
+	int len;
 
 	if (s == NULL)
 		return (0);
 
-	while (s[len] != '\0')
-		len++;
+	len = strlen(s);
 
-	p1 = s;
-	p2 = s + len - 1;
+	if (len <= 1)
+		return (1);
 
-	while (p2 > p1)
-	{
-		if (*p1 != *p2)
-			return (0);
-		p1++;
-		p2--;
-	}
+	if (*s != *(s + len - 1))
+		return (0);
 
-	return (1);
+	s++;
+	*(s + len - 3) = '\0';
+	return (is_palindrome(s));
 }
 
