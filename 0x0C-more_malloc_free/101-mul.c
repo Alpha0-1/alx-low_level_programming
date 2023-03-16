@@ -1,6 +1,9 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
+
+int is_digits(char *str);
+
 /**
  * main - Entry point
  * @argc: The number of command-line arguments
@@ -10,27 +13,46 @@
  */
 int main(int argc, char *argv[])
 {
-	unsigned long mul;
-	int i, j;
+	int num1, num2, result;
 
 	if (argc != 3)
 	{
-		printf("Error\n");
-		exit(98);
+	printf("Error\n");
+	exit(98);
 	}
-	for (i = 1; i < argc; i++)
+
+	if (!is_digits(argv[1]) || !is_digits(argv[2]))
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
-		{
-			if (argv[i][j] > 57 || argv[i][j] < 48)
-			{
-				printf("Error\n");
-				exit(98);
-			}
-		}
+	printf("Error\n");
+	exit(98);
 	}
-		mul = atol(argv[1]) * atol(argv[2]);
-		printf("%lu\n", mul);
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+
+	result = num1 * num2;
+
+	printf("%d\n", result);
 
 	return (0);
 }
+
+/**
+ * is_digits - Checks if a string contains only digits
+ * @str: The string to check
+ *
+ * Return: 1 if the string contains only digits, 0 otherwise
+ */
+int is_digits(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+	if (str[i] < '0' || str[i] > '9')
+		return (0);
+	}
+
+	return (1);
+}
+
