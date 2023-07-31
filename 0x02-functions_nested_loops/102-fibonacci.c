@@ -3,25 +3,33 @@
 /**
  * main - Entry point
  *
- * This program prints the first 50 Fibonacci numbers, starting with 1 and 2,
- * separated by a comma and a space, followed by a new line.
+ * Description: Prints the first 50 Fibonacci numbers
+ * separated by comma and space.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-
 	int i;
-	long fib1 = 1, fib2 = 2, fib;
+	unsigned long long int fib[50];
 
-	printf("%ld, %ld", fib1, fib2);
+	fib[0] = 1;
+	fib[1] = 2;
 
-	for (i = 3; i <= 50; i++)
+
+	for (i = 2; i < 50; i++)
 	{
-	fib = fib1 + fib2;
-	printf(", %ld", fib);
-	fib1 = fib2;
-	fib2 = fib; }
-	printf("\n");
+		fib[i] = fib[i - 1] + fib[i - 2];
+	}
+
+	for (i = 0; i < 49; i++)
+	{
+		printf("%llu, ", fib[i]);
+	}
+
+
+	printf("%llu\n", fib[49]);
+
 	return (0);
 }
+
