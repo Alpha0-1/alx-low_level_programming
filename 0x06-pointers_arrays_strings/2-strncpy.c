@@ -2,11 +2,8 @@
 
 /**
  * _strncpy - Copies a string
- *
  * @dest: Destination string
- *
  * @src: Source string to be copied
- *
  * @n: Maximum number of bytes to be copied from src
  *
  * Description: This function copies the first n bytes of the

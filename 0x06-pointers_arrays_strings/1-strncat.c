@@ -2,11 +2,8 @@
 
 /**
  * _strncat - Concatenates two strings with a limit
- *
  * @dest: Destination string
- *
  * @src: Source string to be appended to dest
- *
  * @n: Maximum number of bytes to be used from src
  *
  * Description: This function concatenates two strings by

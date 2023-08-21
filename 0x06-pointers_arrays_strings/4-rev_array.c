@@ -2,11 +2,8 @@
 
 /**
  * reverse_array - Reverses the content of an array of integers
- *
  * @a: Array of integers
- *
  * @n: Number of elements in the array
- *
  * Description: This function reverses the order of the elements
  * in the array a. It swaps the first element with the last element,
  * the second element with the second-to-last element, and so on,
