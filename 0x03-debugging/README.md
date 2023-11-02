@@ -1,0 +1,1 @@
+Debugging is the process of identifying and fixing errors or bugs in a computer program. These errors can cause the program to behave unexpectedly, produce incorrect results, or even crash the computer system.
