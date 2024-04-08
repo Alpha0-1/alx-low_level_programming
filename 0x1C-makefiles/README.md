@@ -1,0 +1,1 @@
+A Makefile is a script used to automate the process of building executable programs and managing dependencies in software development projects. In the context of C programming, Makefiles are commonly used to compile C source files into executable binaries.
